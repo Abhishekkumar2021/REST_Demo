@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Comments Index</title>
+	</head>
+	<body>
+		<% for( let c = 0; c < comments.length; c++ ) { %>
+		<a href="comments/<%= comments[c].id  %>"> <%= comments[c].username %> </a>
+		<article><%= comments[c].comment%></article>
+		<a href="/comments/<%= comments[c].id%>/edit">Edit</a>
+		<% } %>
+
+		<a href="/comments/new">Go to new</a>
+	</body>
+</html>
